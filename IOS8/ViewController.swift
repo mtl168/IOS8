@@ -9,19 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
     @IBOutlet var btnTest : UIButton = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         btnTest.setTitle("fuck", forState: UIControlState.Normal);
+        btnTest.addTarget(self, action: Selector("btnAction"), forControlEvents: UIControlEvents.TouchUpInside);
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func btnAction()
+    {
+        NSLog("%@", "2134");
+    }
+                            
+    
 
 
 }
